@@ -1,0 +1,36 @@
+.landing-navbar{
+  background-color: transparent;
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  animation: appear 1s linear  alternate both;
+  animation-delay: 2s;
+}
+.landing-navbar-top{
+  background-color: transparent;
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transition: .25s;
+}
+.landing-navbar-no-top{
+  background-color: var(--rich-black-fogra-29);
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  transition: .25s;
+}
+
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

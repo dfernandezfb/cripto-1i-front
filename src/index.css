@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root{
+  --ash-gray: #acbdba;
+  --gainsboro: #cddddd;
+  --royal-purple: #7353ba;
+  --jet: #2e2f2f;
+  --rich-black-fogra-29: #051014;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Noto+Sans&family=Press+Start+2P&display=swap');
+  
+  .bg-azul-oscuro{
+    background-color: #051014 !important;
+  }
+  .logo-app{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    background: #051014;
+    background: linear-gradient(to right, #cddddd 0%, #7353ba 50%, #cddddd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .primary-button{
+    background-color: var(--royal-purple) !important;
+    color: var(--gainsboro) !important;
+    border: none;
+    margin: 10px;
+  }
+  .primary-button:hover{
+    background-color: var(--ash-gray);
+    color: var(--rich-black-fogra-29) !important;
+    border: none;
+    margin: 10px;
+    transform: translateY(-10%);
+  }
+  .right-block{
+    position: absolute;
+    left:300px;
+    padding-top: 50px;
+    
+  }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @media screen and (max-width:330px){
+    .logo-app{
+      font-size: 18px;
+    }
+  }
