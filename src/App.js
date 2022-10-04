@@ -8,6 +8,7 @@ import PrivateRoute from './routes/PrivateRoute';
 function App() {
   return (
     <Router>
+      {/* <ComponenteTest/>  NO PUEDE USAR LA INFORMACIÓN DEL USER CONTEXT*/}
       <UserProvider>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>

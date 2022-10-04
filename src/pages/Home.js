@@ -1,5 +1,29 @@
+import { useContext, useEffect } from "react";
+import { useState } from "react";
+import axiosInstance from "../config/axiosInstance";
+import { UserContext } from "../context/UserContext";
+
 const Home = () => {
-  return ( <h1>Estoy logueado</h1> );
+  const {logout} = useContext(UserContext);
+  const [users, setUsers] = useState([]);
+  const getUsers = async()=>{
+    try {
+      const response = await axiosInstance.get('/users/allusers');
+      setUsers(response.data.users)
+    } catch (error) {
+      alert('Error. Motivo: ' + error.message);
+    }
+  }
+  useEffect(()=>{
+    getUsers();
+  },[])
+  return ( <>
+  {
+    users.map(user=><h1>{user.name}</h1>) 
+  }
+  <button className="btn" onClick={logout}> Cerrar sesión</button>
+  </>
+  );
 }
  
 export default Home;

@@ -11,7 +11,7 @@ const useForm = (initialValues, submit,validations) =>{
   useEffect(()=>{
     if(submitting){
       if(Object.keys(errors).length===0){
-        submit()
+        submit(values)
       }
       setSubmitting(false);
       setTimeout(()=>{

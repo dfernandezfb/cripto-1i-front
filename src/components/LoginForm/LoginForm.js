@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { useContext } from 'react';
 import { FloatingLabel, Form, Button, Alert } from 'react-bootstrap';
 import {BiUserPin} from 'react-icons/bi'
+import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../config/axiosInstance';
 import { LOGIN_INITIAL_VALUES } from '../../constants';
 import { UserContext } from '../../context/UserContext';
@@ -9,9 +11,15 @@ import useForm from '../../hooks/useForm';
 import './LoginForm.css'
 
 const LoginForm = () => {
-  const {login} = useContext(UserContext);
-  
+  const {login, authenticated} = useContext(UserContext);
+  const navigate = useNavigate();
   const {values, handleChange, handleSubmit, errors} = useForm(LOGIN_INITIAL_VALUES,login, validationLogin);
+
+  useEffect(()=>{
+    if(authenticated){
+      navigate('/home');
+    }
+  },[authenticated])
   
   return ( 
     <>
