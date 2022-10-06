@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import UserProvider from './context/UserContext';
+import AdminPage from './pages/AdminPage';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/home' element={<PrivateRoute><Home/></PrivateRoute>}/>
+          <Route path='/admin' element={<PrivateRoute><AdminPage/></PrivateRoute>}/>
           <Route path='/login' element={<LoginPage/>}/>
         </Routes>
       </UserProvider>

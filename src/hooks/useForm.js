@@ -41,7 +41,8 @@ const useForm = (initialValues, submit,validations) =>{
     handleChange,
     handleSubmit,
     values,
-    errors
+    errors,
+    setValues
   }
 }
 

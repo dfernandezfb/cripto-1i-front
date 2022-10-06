@@ -13,7 +13,6 @@ const UserProvider = ({children})=>{
     try {
       const response = await axiosInstance.post('/users/login',values);
       const data = response.data;
-      console.log(data.token);
       setUser(data.user)
       setToken(data.token)
       setAuthenticated(true);

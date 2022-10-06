@@ -8,7 +8,7 @@ const PrivateRoute = ({children})=>{
 
   useEffect(()=>{
     getAuth()
-  },[authenticated]);
+  },[]);
 
   return authenticated? children : <Navigate to='/login'/>
 }

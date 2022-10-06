@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useState } from "react";
+import InternHeader from "../components/InternHeader/InternHeader";
 import axiosInstance from "../config/axiosInstance";
 import { UserContext } from "../context/UserContext";
 
@@ -18,6 +19,7 @@ const Home = () => {
     getUsers();
   },[])
   return ( <>
+  <InternHeader/>
   {
     users.map(user=><h1>{user.name}</h1>) 
   }

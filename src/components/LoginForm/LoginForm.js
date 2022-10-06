@@ -57,7 +57,6 @@ const LoginForm = () => {
               Object.values(errors).map(error=> <Alert variant='danger'>{error}</Alert>)
               :
               null
-
           }
         </form>
       </div>

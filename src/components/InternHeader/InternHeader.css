@@ -1,0 +1,14 @@
+.intern-header-button{
+  color: white;
+  font-size: 15px !important;
+  font-weight: 200;
+  padding: 10px 10px !important;
+}
+.lateral-nav{
+  position: fixed;
+  padding-top: 50px;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
